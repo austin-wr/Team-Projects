@@ -60,7 +60,7 @@ def contrast_equalization(selected_color, side_color1, side_color2, clip_limit, 
     return selected_color, side_color1, side_color2
 
 
-def subtract_size_colors_and_equalize(selected_color, side_color1, side_color2):
+def subtract_side_colors_and_equalize(selected_color, side_color1, side_color2):
     test_image = cv2.subtract(selected_color, side_color1)
     test_image = cv2.subtract(test_image, side_color2)
     return cv2.equalizeHist(test_image)
